@@ -52,6 +52,9 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         key: _key,
         appBar: AppBar(
+          title: Text("Marlo Bank"),
+          centerTitle: true,
+          backgroundColor: Colors.cyan,
           actions: [
             IconButton(
                 icon: Icon(MyApp.themeNotifier.value == ThemeMode.light
@@ -276,15 +279,14 @@ class _HomeState extends State<Home> {
                           width: 335,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.shade400
                                     .withOpacity(0.4), //color of shadow
                                 spreadRadius: 1, //spread radius
-                                blurRadius: 1, // blur radius
+                                blurRadius: 0, // blur radius
                                 offset:
-                                    Offset(0, 1), // changes position of shadow
+                                Offset(0, 2), // changes position of shadow
                               ),
                               //you can set more BoxShadow() here
                             ],
@@ -451,15 +453,15 @@ class _HomeState extends State<Home> {
                           width: 335,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
+
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.shade400
                                     .withOpacity(0.4), //color of shadow
                                 spreadRadius: 1, //spread radius
-                                blurRadius: 1, // blur radius
+                                blurRadius: 0, // blur radius
                                 offset:
-                                    Offset(0, 1), // changes position of shadow
+                                    Offset(0, 2), // changes position of shadow
                               ),
                               //you can set more BoxShadow() here
                             ],

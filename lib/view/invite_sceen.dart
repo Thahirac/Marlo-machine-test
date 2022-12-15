@@ -102,18 +102,18 @@ class _InvitePageState extends State<InvitePage> {
                                             decoration: BoxDecoration(
                                               boxShadow: [
                                                 BoxShadow(
-                                                  color:
-                                                  Colors.grey.shade400.withOpacity(0.4), //color of shadow
+                                                  color: teamroles[index].isSelected == true? Colors.transparent : Colors.grey.shade400.withOpacity(0.4), //color of shadow
                                                   spreadRadius: 1, //spread radius
-                                                  blurRadius: 1, // blur radius
-                                                  offset: Offset(0, 1), // changes position of shadow
+                                                  blurRadius: 0, // blur radius
+                                                  offset:
+                                                  Offset(0, 2), // changes position of shadow
                                                 ),
                                                 //you can set more BoxShadow() here
                                               ],
                                               borderRadius: BorderRadius.circular(10),
                                               color:  teamroles[index].isSelected == true
                                                   ? Colors.cyan.shade50
-                                                  : Colors.white,
+                                                  : Colors.transparent,
                                             ),
                                             child:  Row(
                                               children: [
@@ -380,15 +380,24 @@ class _InvitePageState extends State<InvitePage> {
               padding: EdgeInsets.only(left: 20, right: 20,top: 10),
               child: Container(
                 height: 60,
-                decoration: BoxDecoration(color: Colors.blueGrey.shade50,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.shade400
+                          .withOpacity(0.4), //color of shadow
+                      spreadRadius: 1, //spread radius
+                      blurRadius: 0, // blur radius
+                      offset:
+                      Offset(0, 2), // changes position of shadow
+                    ),
+                    //you can set more BoxShadow() here
+                  ],
                   borderRadius: BorderRadius.circular(12),
                 ),
 
                 child: Center(
                   child: TextField(
                     controller:  emailController,
-                    cursorColor: Colors.black,
-                    style: TextStyle(color: Colors.black,),
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       //floatingLabelBehavior: true,
@@ -397,19 +406,11 @@ class _InvitePageState extends State<InvitePage> {
                         fontSize: 14,
                       ),
                       labelText: "Business email",
-                      filled: true,
-                      fillColor:  Colors.blueGrey.shade50,
+                      filled: false,
 
                       contentPadding: const EdgeInsets.only(left: 14.0, bottom: 0.0, top: 16.0),
 
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color:  Colors.blueGrey.shade50,),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color:  Colors.blueGrey.shade50,),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
+
                     ),
                   ),
                 ),
@@ -422,8 +423,19 @@ class _InvitePageState extends State<InvitePage> {
               child: Container(
                 height: 60,
 
-                decoration: BoxDecoration(color: Colors.blueGrey.shade50,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.shade400
+                          .withOpacity(0.4), //color of shadow
+                      spreadRadius: 1, //spread radius
+                      blurRadius: 0, // blur radius
+                      offset:
+                      Offset(0, 2), // changes position of shadow
+                    ),
+                    //you can set more BoxShadow() here
+                  ],
                 ),
                 child: Row(
                   children: [

@@ -266,9 +266,9 @@ class _InvitePageState extends State<InvitePage> {
               child: _isloading ?  const Padding(padding: EdgeInsets.all(10.0), child: SizedBox(
                   height: 25,
                   width: 10,
-                  child: CircularProgressIndicator(strokeWidth: 1,)),) : Text(
+                  child: CircularProgressIndicator(strokeWidth: 1,color: Colors.white,)),) : Text(
                "Continue",
-             style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),
+             style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.white),
               ),
               style: TextButton.styleFrom(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
